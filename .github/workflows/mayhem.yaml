@@ -7,7 +7,7 @@ on:
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
-  PROJECTNAME: thin-edge.io
+  PROJECTNAME: thin-edge-io
   MAYHEMFILE: Mayhem/cc8y_translator.mayhemfile
 
 jobs:
