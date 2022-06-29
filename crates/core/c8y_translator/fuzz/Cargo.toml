@@ -22,6 +22,6 @@ members = ["."]
 
 [[bin]]
 name = "fuzz_c8y_translator"
-path = "fuzz_targets/fuzz_target_1.rs"
+path = "fuzz_targets/fuzz_c8y_translator.rs"
 test = false
 doc = false
