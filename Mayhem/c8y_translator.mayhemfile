@@ -2,4 +2,4 @@ project: thin-edge-io
 target: c8y_translator
 
 cmds:
-  - cmd: /fuzz_target_1
+  - cmd: /fuzz_c8y_translator

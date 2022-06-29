@@ -9,11 +9,11 @@ RUN cargo install cargo-fuzz
 
 # BUILD INSTRUCTIONS
 WORKDIR /thin-edge.io/crates/core/c8y_translator/fuzz
-RUN cargo +nightly fuzz build fuzz_target_1
+RUN cargo +nightly fuzz build fuzz_c8y_translator
 # Output binaries are placed in /thin-edge.io/crates/core/c8y_translator/fuzz/target/x86_64-unknown-linux-gnu/release/
 
 # Package Stage -- we package for a plain Ubuntu machine
 FROM --platform=linux/amd64 ubuntu:20.04
 
 # Copy the binary from the build stage to an Ubuntu docker image
-COPY --from=builder /thin-edge.io/crates/core/c8y_translator/fuzz/target/x86_64-unknown-linux-gnu/release/fuzz_target_1 /
+COPY --from=builder /thin-edge.io/crates/core/c8y_translator/fuzz/target/x86_64-unknown-linux-gnu/release/fuzz_c8y_translator /
