@@ -23,7 +23,7 @@ jobs:
     runs-on: Ubuntu-20.04
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v3.1.0
 
       - name: Enable toolchain via github action
         uses: dtolnay/rust-toolchain@1.63.0
@@ -51,7 +51,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v3.1.0
 
       - name: Download release artifacts
         uses: actions/download-artifact@v3
@@ -85,7 +85,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v3.1.0
 
       - name: Enable toolchain via github action
         uses: dtolnay/rust-toolchain@1.63.0
@@ -135,7 +135,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v3.1.0
 
       - name: Clean up ${{ matrix.rpi }}
         run: ./ci/installation_scripts/clean_up_rpi.sh
@@ -156,7 +156,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v3.1.0
 
       - name: Download release artifacts
         uses: actions/download-artifact@v3
