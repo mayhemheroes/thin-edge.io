@@ -1,0 +1,27 @@
+
+[package]
+name = "c8y_translator-fuzz"
+version = "0.0.0"
+authors = ["Automatically generated"]
+publish = false
+edition = "2021"
+rust-version = "1.58.1"
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+libfuzzer-sys = "0.4"
+
+[dependencies.c8y_translator]
+path = ".."
+
+# Prevent this from interfering with workspaces
+[workspace]
+members = ["."]
+
+[[bin]]
+name = "fuzz_c8y_translator"
+path = "fuzz_targets/fuzz_c8y_translator.rs"
+test = false
+doc = false
